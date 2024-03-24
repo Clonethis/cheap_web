@@ -4,10 +4,11 @@
  * @see https://v0.dev/t/SQaZvxS5Lbw
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
+import { usePathname } from 'next/navigation';
 import Link from "next/link";
 export default function Component() {
   const nameOfSite = "Nice";
-  const urlOfSite = document.location.origin;
+  const urlOfSite = window.location.origin;
   console.log(urlOfSite);
   return (
     <div className="w-full py-12">
