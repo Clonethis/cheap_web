@@ -7,8 +7,14 @@
 import { usePathname } from 'next/navigation';
 import Link from "next/link";
 export default function Component() {
-  const nameOfSite = "Nice";
-  const urlOfSite = window.location.origin;
+  const nameOfSite = "Saint Web"
+  let urlOfSite = "example.com"
+  if (typeof window !== "undefined") {
+    urlOfSite = window.location.origin;
+    // browser code
+  }
+
+
   console.log(urlOfSite);
   return (
     <div className="w-full py-12">
